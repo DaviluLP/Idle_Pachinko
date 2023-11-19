@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw56tpochc4u0"]
+
+[ext_resource type="SphereMesh" uid="uid://bm3o7mu8iemi2" path="res://Objects/Ball.tres" id="1_6xyiw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vaoeq"]
+radius = 20.0
+
+[node name="Obstacle" type="StaticBody2D"]
+position = Vector2(128, 192)
+scale = Vector2(3, 3)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+mesh = ExtResource("1_6xyiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vaoeq")

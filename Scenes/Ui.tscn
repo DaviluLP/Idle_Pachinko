@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddgl110dkpt8g"]
+
+[ext_resource type="Script" path="res://Scripts/Ui.gd" id="1_nlg44"]
+
+[node name="Ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlg44")
+
+[node name="L_Text" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Spawning objects: 
+Points:"
+horizontal_alignment = 2
+
+[node name="L_Spawns" type="Label" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_right = 184.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="L_Points" type="Label" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 24.0
+offset_right = 184.0
+offset_bottom = 47.0
+text = "0"

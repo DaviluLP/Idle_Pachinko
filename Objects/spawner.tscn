@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvx10kkflj6l7"]
+
+[ext_resource type="Script" path="res://Scripts/Spawner.gd" id="1_8p7ey"]
+[ext_resource type="SphereMesh" uid="uid://bm3o7mu8iemi2" path="res://Objects/Ball.tres" id="2_mhr4d"]
+[ext_resource type="PackedScene" uid="uid://bnbpaoim5a5rd" path="res://Objects/ball.tscn" id="2_xar5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqsqa"]
+size = Vector2(1000, 20)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ch0n"]
+radius = 20.0
+
+[node name="Spawner" type="Node2D"]
+script = ExtResource("1_8p7ey")
+speed = 50.0
+ball = ExtResource("2_xar5g")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_bqsqa")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+motion_mode = 1
+platform_on_leave = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CharacterBody2D"]
+modulate = Color(0, 1, 1, 1)
+mesh = ExtResource("2_mhr4d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_7ch0n")
+
+[node name="BallTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="BallTimer" to="." method="_on_ball_timer_timeout"]
