@@ -33,3 +33,13 @@ offset_top = 24.0
 offset_right = 184.0
 offset_bottom = 47.0
 text = "0"
+
+[node name="B_Menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 64.0
+offset_right = 1050.0
+offset_bottom = 95.0
+text = "StartMenu"
+
+[connection signal="pressed" from="B_Menu" to="." method="_on_b_menu_pressed"]

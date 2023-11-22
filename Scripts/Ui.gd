@@ -24,3 +24,7 @@ func _change_new_spawns(value : int):
 func _change_new_points(value : int):
 	points_value = value
 	points.text = str(points_value)
+
+
+func _on_b_menu_pressed():
+	get_tree().change_scene_to_file("res://Scenes/Menu.tscn")

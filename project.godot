@@ -11,9 +11,11 @@ config_version=5
 [application]
 
 config/name="PixelPachinko"
-run/main_scene="res://Scenes/hauptfenster.tscn"
+run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/image="res://DeviluLogo.png"
 config/icon="res://icon.svg"
+boot_splash/minimum_display_time=2000
 
 [audio]
 
@@ -22,6 +24,7 @@ driver/mix_rate=48000
 [autoload]
 
 GameScore="*res://AutoLoads/score.gd"
+AudioManager="*res://AutoLoads/AudioManager.gd"
 
 [display]
 

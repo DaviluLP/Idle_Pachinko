@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://clol1hkieff57"]
+[gd_scene load_steps=7 format=3 uid="uid://clol1hkieff57"]
 
 [ext_resource type="PackedScene" uid="uid://dvx10kkflj6l7" path="res://Objects/spawner.tscn" id="1_gjpgb"]
 [ext_resource type="PackedScene" uid="uid://cw56tpochc4u0" path="res://Objects/obstacle.tscn" id="3_gs5ou"]
 [ext_resource type="PackedScene" uid="uid://dbpjrg88x18kt" path="res://Objects/goal.tscn" id="4_e1nqe"]
 [ext_resource type="Texture2D" uid="uid://b2o03ideqnmsb" path="res://Sprites/TileMap.png" id="4_wy1d1"]
-[ext_resource type="AudioStream" uid="uid://claj4nupejjec" path="res://Audio/music/ES_Meditation Aquatic - 369.wav" id="5_fhpsn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngxgx"]
 texture = ExtResource("4_wy1d1")
@@ -262,7 +261,8 @@ texture_region_size = Vector2i(96, 96)
 
 [sub_resource type="TileSet" id="TileSet_brpot"]
 tile_size = Vector2i(96, 96)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Terrain 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
@@ -393,8 +393,6 @@ rendering_quadrant_size = 1
 format = 2
 layer_0/tile_data = PackedInt32Array(393216, 262144, 0, 393217, 65536, 4, 393218, 65536, 4, 393219, 327680, 0, 393220, 65536, 4, 393221, 65536, 4, 393222, 65536, 4, 393223, 65536, 4, 393224, 65536, 6, 393225, 65536, 4, 393226, 65536, 6, 393227, 65536, 4, 393228, 393216, 0)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_fhpsn")
-volume_db = -14.991
-autoplay = true
-bus = &"Music"
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+position = Vector2(624, 240)
+current = true

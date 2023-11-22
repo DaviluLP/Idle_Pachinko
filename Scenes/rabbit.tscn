@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://y3f2g4sshg0l"]
+
+[ext_resource type="SpriteFrames" uid="uid://c5nujlfbjlf34" path="res://Sprites/Rabbit/animation_rabbit.tres" id="1_7s282"]
+[ext_resource type="Script" path="res://Scripts/rabbit.gd" id="1_obbgu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ynudb"]
+radius = 16.0
+height = 32.0
+
+[node name="Rabbit" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_obbgu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource("CapsuleShape2D_ynudb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = ExtResource("1_7s282")
+animation = &"spawn"
