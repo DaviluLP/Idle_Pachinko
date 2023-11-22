@@ -3,6 +3,8 @@ extends Control
 
 
 func _on_b_start_pressed():
+	GameScore.spawns = 0
+	GameScore.score = 0
 	get_tree().change_scene_to_file("res://Scenes/hauptfenster.tscn")
 
 

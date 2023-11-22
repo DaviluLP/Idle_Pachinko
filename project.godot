@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="PixelPachinko"
+config/name="HokusPokusPixelPachinko"
 run/main_scene="res://Scenes/Menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/image="res://DeviluLogo.png"

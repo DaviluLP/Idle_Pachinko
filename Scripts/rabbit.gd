@@ -16,3 +16,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+
+
+func _on_life_timer_timeout():
+	queue_free()
