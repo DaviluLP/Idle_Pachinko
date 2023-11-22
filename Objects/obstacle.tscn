@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cw56tpochc4u0"]
+[gd_scene load_steps=4 format=3 uid="uid://cw56tpochc4u0"]
 
 [ext_resource type="Texture2D" uid="uid://u6t1w4b6v7lo" path="res://Sprites/Moon.png" id="1_a151q"]
+[ext_resource type="Script" path="res://Objects/obstacle.gd" id="1_ethb1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vaoeq"]
 radius = 48.0
 
 [node name="Obstacle" type="StaticBody2D"]
 scale = Vector2(3, 3)
+script = ExtResource("1_ethb1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_a151q")

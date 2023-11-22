@@ -10,14 +10,23 @@ config_version=5
 
 [application]
 
-config/name="Pachinko"
+config/name="PixelPachinko"
 run/main_scene="res://Scenes/hauptfenster.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+driver/mix_rate=48000
+
 [autoload]
 
 GameScore="*res://AutoLoads/score.gd"
+
+[display]
+
+window/size/viewport_width=1240
+window/size/viewport_height=720
 
 [dotnet]
 

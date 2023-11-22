@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnbpaoim5a5rd"]
+[gd_scene load_steps=6 format=3 uid="uid://bnbpaoim5a5rd"]
 
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="1_8ctc1"]
 [ext_resource type="SphereMesh" uid="uid://bm3o7mu8iemi2" path="res://Objects/Ball.tres" id="1_mvxvs"]
+[ext_resource type="AudioStream" uid="uid://cothi14yqs0u2" path="res://Audio/effekt/Splash2.mp3" id="3_ievfy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tlxtj"]
-bounce = 0.7
+bounce = 0.2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xamp4"]
 radius = 20.0
@@ -12,6 +13,8 @@ radius = 20.0
 [node name="Ball" type="RigidBody2D" groups=["Ball"]]
 z_index = 1
 physics_material_override = SubResource("PhysicsMaterial_tlxtj")
+max_contacts_reported = 20
+contact_monitor = true
 script = ExtResource("1_8ctc1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -24,9 +27,14 @@ mesh = ExtResource("1_mvxvs")
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 30.0
 one_shot = true
 autostart = true
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ievfy")
+bus = &"Effekts"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

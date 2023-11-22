@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://clol1hkieff57"]
+[gd_scene load_steps=8 format=3 uid="uid://clol1hkieff57"]
 
 [ext_resource type="PackedScene" uid="uid://dvx10kkflj6l7" path="res://Objects/spawner.tscn" id="1_gjpgb"]
 [ext_resource type="PackedScene" uid="uid://cw56tpochc4u0" path="res://Objects/obstacle.tscn" id="3_gs5ou"]
 [ext_resource type="PackedScene" uid="uid://dbpjrg88x18kt" path="res://Objects/goal.tscn" id="4_e1nqe"]
 [ext_resource type="Texture2D" uid="uid://b2o03ideqnmsb" path="res://Sprites/TileMap.png" id="4_wy1d1"]
+[ext_resource type="AudioStream" uid="uid://claj4nupejjec" path="res://Audio/music/ES_Meditation Aquatic - 369.wav" id="5_fhpsn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngxgx"]
 texture = ExtResource("4_wy1d1")
@@ -270,112 +271,130 @@ sources/0 = SubResource("TileSetAtlasSource_ngxgx")
 [node name="Game" type="Node2D"]
 
 [node name="Spawner" parent="." instance=ExtResource("1_gjpgb")]
-position = Vector2(576, 24)
+position = Vector2(623, 24)
 
 [node name="Obstacles" type="Node2D" parent="."]
 
 [node name="Obstacle" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(96, 112)
+position = Vector2(64, 112)
 scale = Vector2(1, 1)
 
 [node name="Obstacle2" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(256, 112)
+position = Vector2(224, 112)
 scale = Vector2(1, 1)
 
 [node name="Obstacle3" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(416, 112)
+position = Vector2(384, 112)
 scale = Vector2(1, 1)
 
 [node name="Obstacle4" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(576, 112)
+position = Vector2(544, 112)
 scale = Vector2(1, 1)
 
 [node name="Obstacle5" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(736, 112)
+position = Vector2(704, 112)
 scale = Vector2(1, 1)
 
 [node name="Obstacle6" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(896, 112)
+position = Vector2(864, 112)
 scale = Vector2(1, 1)
 
 [node name="Obstacle8" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(176, 240)
+position = Vector2(144, 240)
 scale = Vector2(1, 1)
 
 [node name="Obstacle9" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(336, 240)
+position = Vector2(304, 240)
 scale = Vector2(1, 1)
 
 [node name="Obstacle10" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(496, 240)
+position = Vector2(464, 240)
 scale = Vector2(1, 1)
 
 [node name="Obstacle11" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(656, 240)
+position = Vector2(624, 240)
 scale = Vector2(1, 1)
 
 [node name="Obstacle12" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(816, 240)
+position = Vector2(784, 240)
 scale = Vector2(1, 1)
 
 [node name="Obstacle13" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(976, 240)
+position = Vector2(944, 240)
 scale = Vector2(1, 1)
 
 [node name="Obstacle14" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(96, 368)
+position = Vector2(64, 368)
 scale = Vector2(1, 1)
 
 [node name="Obstacle15" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(256, 368)
+position = Vector2(224, 368)
 scale = Vector2(1, 1)
 
 [node name="Obstacle16" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(416, 368)
+position = Vector2(384, 368)
 scale = Vector2(1, 1)
 
 [node name="Obstacle17" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(576, 368)
+position = Vector2(544, 368)
 scale = Vector2(1, 1)
 
 [node name="Obstacle18" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(736, 368)
+position = Vector2(704, 368)
 scale = Vector2(1, 1)
 
 [node name="Obstacle19" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(896, 368)
+position = Vector2(864, 368)
 scale = Vector2(1, 1)
 
 [node name="Obstacle7" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(1056, 112)
+position = Vector2(1024, 112)
+scale = Vector2(1, 1)
+
+[node name="Obstacle22" parent="Obstacles" instance=ExtResource("3_gs5ou")]
+position = Vector2(1104, 240)
+scale = Vector2(1, 1)
+
+[node name="Obstacle23" parent="Obstacles" instance=ExtResource("3_gs5ou")]
+position = Vector2(1184, 112)
 scale = Vector2(1, 1)
 
 [node name="Obstacle20" parent="Obstacles" instance=ExtResource("3_gs5ou")]
-position = Vector2(1056, 368)
+position = Vector2(1024, 368)
+scale = Vector2(1, 1)
+
+[node name="Obstacle21" parent="Obstacles" instance=ExtResource("3_gs5ou")]
+position = Vector2(1184, 368)
 scale = Vector2(1, 1)
 
 [node name="Goals" type="Node2D" parent="."]
 
 [node name="Goal" parent="Goals" instance=ExtResource("4_e1nqe")]
-position = Vector2(832, 554)
+position = Vector2(896, 554)
 
 [node name="Goal6" parent="Goals" instance=ExtResource("4_e1nqe")]
-position = Vector2(1024, 554)
+position = Vector2(1088, 554)
 
 [node name="Goal2" parent="Goals" instance=ExtResource("4_e1nqe")]
-position = Vector2(640, 554)
+position = Vector2(704, 554)
 
 [node name="Goal3" parent="Goals" instance=ExtResource("4_e1nqe")]
-position = Vector2(448, 554)
+position = Vector2(512, 554)
 
 [node name="Goal4" parent="Goals" instance=ExtResource("4_e1nqe")]
-position = Vector2(256, 554)
+position = Vector2(320, 554)
 
 [node name="Goal5" parent="Goals" instance=ExtResource("4_e1nqe")]
-position = Vector2(64, 554)
+position = Vector2(128, 554)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_brpot")
 rendering_quadrant_size = 1
 format = 2
-layer_0/tile_data = PackedInt32Array(393216, 262144, 0, 393217, 65536, 4, 393218, 65536, 4, 393219, 327680, 0, 393220, 65536, 4, 393221, 65536, 4, 393222, 65536, 4, 393223, 65536, 4, 393224, 65536, 6, 393225, 65536, 4, 393226, 65536, 6, 393227, 393216, 0)
+layer_0/tile_data = PackedInt32Array(393216, 262144, 0, 393217, 65536, 4, 393218, 65536, 4, 393219, 327680, 0, 393220, 65536, 4, 393221, 65536, 4, 393222, 65536, 4, 393223, 65536, 4, 393224, 65536, 6, 393225, 65536, 4, 393226, 65536, 6, 393227, 65536, 4, 393228, 393216, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_fhpsn")
+volume_db = -14.991
+autoplay = true
+bus = &"Music"
