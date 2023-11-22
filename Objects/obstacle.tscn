@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://cw56tpochc4u0"]
 
-[ext_resource type="SphereMesh" uid="uid://bm3o7mu8iemi2" path="res://Objects/Ball.tres" id="1_6xyiw"]
+[ext_resource type="Texture2D" uid="uid://u6t1w4b6v7lo" path="res://Sprites/Moon.png" id="1_a151q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vaoeq"]
-radius = 20.0
+radius = 48.0
 
 [node name="Obstacle" type="StaticBody2D"]
 scale = Vector2(3, 3)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = ExtResource("1_6xyiw")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_a151q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vaoeq")
