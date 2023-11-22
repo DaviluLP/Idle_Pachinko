@@ -6,7 +6,6 @@
 radius = 20.0
 
 [node name="Obstacle" type="StaticBody2D"]
-position = Vector2(128, 192)
 scale = Vector2(3, 3)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
