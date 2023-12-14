@@ -15,23 +15,14 @@ script = ExtResource("1_nlg44")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Spawning objects: 
-Points:"
+text = "Points:"
 horizontal_alignment = 2
-
-[node name="L_Spawns" type="Label" parent="."]
-layout_mode = 0
-offset_left = 144.0
-offset_right = 184.0
-offset_bottom = 23.0
-text = "0"
 
 [node name="L_Points" type="Label" parent="."]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 24.0
-offset_right = 184.0
-offset_bottom = 47.0
+offset_left = 64.0
+offset_right = 104.0
+offset_bottom = 23.0
 text = "0"
 
 [node name="B_Menu" type="Button" parent="."]

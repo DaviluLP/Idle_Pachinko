@@ -19,7 +19,7 @@ boot_splash/minimum_display_time=2000
 
 [audio]
 
-driver/mix_rate=48000
+driver/mix_rate=44000
 
 [autoload]
 
